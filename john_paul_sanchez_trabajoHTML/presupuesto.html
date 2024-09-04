@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre de la Empresa - Presupuestos</title>
+    <meta name="viewport" content="dwidth=device-width, initial-scale=1.0">
+    <title>Solicitar Presupuesto - Muebles MaxterHouse</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Nombre de la Empresa</div>
+            <div class="logo">Muebles MaxterHouse</div>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="productos.html">Galería</a></li>
@@ -21,37 +21,47 @@
 
     <main>
         <h1>Solicita un Presupuesto</h1>
-        <form action="#" method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+        <p>Rellene el siguiente formulario para solicitar un presupuesto personalizado.</p>
+        
+        <form action="#" method="post" class="formulario-presupuesto">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" title="El nombre solo debe contener letras y espacios.">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="123456789" required pattern="[0-9]{9}" title="El número de teléfono debe tener 9 dígitos.">
+            </div>
 
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required>
+            <div class="form-group">
+                <label for="informacion">Solicite más información:</label>
+                <textarea id="informacion" name="informacion" rows="5" placeholder="Escriba aquí su mensaje" required></textarea>
+            </div>
 
-            <label for="informacion">Solicite más información:</label>
-            <textarea id="informacion" name="informacion" rows="4" required></textarea>
-
-            <label for="politica">
-                <input type="checkbox" id="politica" name="politica" required>
-                Acepto la Política de Privacidad
-            </label>
+            <div class="form-group">
+                <label for="politica">
+                    <input type="checkbox" id="politica" name="politica" required>
+                    Acepto la <a href="#" target="_blank">Política de Privacidad</a>
+                </label>
+            </div>
 
             <button type="submit">Enviar</button>
         </form>
     </main>
 
     <footer>
-        <p>© 2024 Nombre de la Empresa</p>
         <div class="redes-sociales">
-            <a href="#">Facebook</a> | 
-            <a href="#">Twitter</a> | 
-            <a href="#">Instagram</a>
+            <a href="#"><img src="img/facebook.png" alt="Facebook" class="social-icon"></a>
+            <a href="#"><img src="img/twitter.png" alt="Twitter" class="social-icon"></a>
         </div>
-        <p>Dirección de la Empresa</p>
-        <a href="#">Aviso Legal</a>
+        <p>© 2024 Muebles MaxterHouse. Calle Hormigoneras 7, Alcorcon, Madrid. | <a href="#">Aviso Legal</a></p>
     </footer>
+
 </body>
 </html>
