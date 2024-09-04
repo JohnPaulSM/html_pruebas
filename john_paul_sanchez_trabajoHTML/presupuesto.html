@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre de la Empresa - Presupuestos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Nombre de la Empresa</div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Galería</a></li>
+                <li class="activo"><a href="presupuesto.html">Presupuestos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Solicita un Presupuesto</h1>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="informacion">Solicite más información:</label>
+            <textarea id="informacion" name="informacion" rows="4" required></textarea>
+
+            <label for="politica">
+                <input type="checkbox" id="politica" name="politica" required>
+                Acepto la Política de Privacidad
+            </label>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2024 Nombre de la Empresa</p>
+        <div class="redes-sociales">
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </div>
+        <p>Dirección de la Empresa</p>
+        <a href="#">Aviso Legal</a>
+    </footer>
+</body>
+</html>
