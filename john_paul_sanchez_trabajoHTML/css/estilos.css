@@ -1,23 +1,28 @@
-/* Reset básico */
+/* Reset básico para eliminar márgenes y rellenos predeterminados y aplicar el box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos generales del body */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column; /* Asegura que el footer se mantenga al fondo */
 }
 
+/* Estilos para el encabezado */
 header {
     background: #333;
     color: #fff;
     padding: 10px 0;
 }
 
+/* Estilos para la navegación dentro del encabezado */
 header nav {
     display: flex;
     justify-content: space-between;
@@ -25,66 +30,80 @@ header nav {
     padding: 0 20px;
 }
 
+/* Estilos para la lista de navegación */
 header nav ul {
     list-style: none;
     display: flex;
+    padding: 0; /* Eliminado padding predeterminado */
 }
 
+/* Estilos para los elementos de la lista de navegación */
 header nav ul li {
     margin: 0 15px;
 }
 
+/* Estilos para los enlaces en la navegación */
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
+/* Estilos para los enlaces al pasar el ratón y para los enlaces activos */
 header nav ul li a:hover,
 header nav ul li a.activo {
     color: #ff9900;
 }
 
+/* Estilos para el logo */
 .logo img {
     height: 50px;
 }
 
+/* Estilos para el contenido principal */
 main {
     padding: 20px;
+    flex: 1; /* Permite que el main se expanda para llenar el espacio disponible */
 }
 
+/* Estilos para los encabezados en el contenido principal */
 main h1, main h2 {
     color: #333;
     margin-bottom: 15px;
 }
 
+/* Estilos para los párrafos en el contenido principal */
 main p {
     margin-bottom: 20px;
 }
 
+/* Estilos para las secciones dentro del contenido principal */
 section {
     margin-bottom: 40px;
 }
 
-/* Estilo de la galería */
+/* Estilos para la galería de imágenes */
 .galeria {
     display: flex;
     justify-content: space-between;
 }
 
+/* Estilos para las imágenes en la galería */
 .galeria img {
     width: 32%;
     height: auto;
     border: 2px solid #ddd;
     border-radius: 5px;
     transition: transform 0.3s;
+    margin-bottom: 15px; /* Espacio entre imágenes */
 }
 
+/* Efecto al pasar el ratón sobre las imágenes de la galería */
 .galeria img:hover {
     transform: scale(1.05);
 }
 
-/* Formulario */
+/* Estilos para los formularios */
 form {
     background-color: #fff;
     padding: 20px;
@@ -94,16 +113,19 @@ form {
     margin: 0 auto;
 }
 
+/* Estilos para los grupos de campos en el formulario */
 .form-group {
     margin-bottom: 20px;
 }
 
+/* Estilos para las etiquetas en el formulario */
 label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
 
+/* Estilos para los campos de entrada en el formulario */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -115,10 +137,12 @@ textarea {
     font-size: 16px;
 }
 
+/* Estilos para las casillas de verificación en el formulario */
 input[type="checkbox"] {
     margin-right: 10px;
 }
 
+/* Estilos para los botones */
 button {
     background-color: #333;
     color: #fff;
@@ -127,21 +151,24 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra más visible */
 }
 
+/* Estilos para el botón al pasar el ratón */
 button:hover {
     background-color: #ff9900;
 }
 
-/* Estilo del pie de página */
+/* Estilos para el pie de página */
 footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
+    margin-top: auto; /* Esto empuja el footer hacia abajo */
 }
 
+/* Estilos para los enlaces de redes sociales en el pie de página */
 footer .redes-sociales a {
     color: #fff;
     text-decoration: none;
@@ -149,23 +176,27 @@ footer .redes-sociales a {
     font-size: 18px;
 }
 
+/* Estilos para los enlaces de redes sociales al pasar el ratón */
 footer .redes-sociales a:hover {
     color: #ff9900;
 }
 
+/* Estilos para el párrafo en el pie de página */
 footer p {
     margin-top: 10px;
 }
 
-/* Mapa de contacto */
+/* Estilos para las imágenes dentro del main */
 main img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    margin-bottom: 20px; /* Espacio con otros elementos */
 }
 
-/* Media Queries para responsive design */
+/* Consultas de medios para diseño responsivo */
 @media (max-width: 768px) {
+    /* Estilos para la galería en pantallas pequeñas */
     .galeria {
         flex-direction: column;
     }
@@ -175,6 +206,7 @@ main img {
         margin-bottom: 15px;
     }
 
+    /* Estilos para la navegación en pantallas pequeñas */
     header nav ul {
         flex-direction: column;
         align-items: center;
@@ -185,13 +217,31 @@ main img {
     }
 }
 
-.redes-sociales a {
-    display: inline-block; /* Para aplicar el tamaño solo al ícono */
+/* Estilos para enlaces activos en la navegación */
+nav ul li.activo a {
+    color: #ff0000;
+    font-weight: bold;
+    border-bottom: 2px solid #ff0000;
 }
 
-.social-icon {
-    width: 24px; /* Tamaño del ícono */
-    height: 24px; /* Mantiene la proporción */
-    margin-right: 10px; /* Espacio entre los íconos */
-    vertical-align: middle; /* Alinea verticalmente los íconos */
+/* Estilos adicionales para la altura completa y diseño del footer */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Estilo para la flexibilidad del cuerpo */
+body {
+    display: flex;
+    flex-direction: column; /* Asegura que el footer se mantenga al fondo */
+}
+
+/* Estilos para las redes sociales en el pie de página */
+footer .redes-sociales {
+    margin-bottom: 10px;
+}
+
+/* Estilo para los íconos sociales */
+footer .social-icon {
+    margin: 0 5px;
 }
