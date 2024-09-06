@@ -57,7 +57,8 @@ header nav ul li a.activo {
 
 /* Estilos para el logo */
 .logo img {
-    height: 50px;
+    max-width: 150px;
+    height: auto;
 }
 
 /* Estilos para el contenido principal */
@@ -243,5 +244,7 @@ footer .redes-sociales {
 
 /* Estilo para los íconos sociales */
 footer .social-icon {
+    width: 24px;
+    height: auto;
     margin: 0 5px;
 }
